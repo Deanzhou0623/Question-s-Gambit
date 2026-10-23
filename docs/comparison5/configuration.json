@@ -1,0 +1,20 @@
+{
+  "MODEL": "openai/gpt-5.5",
+  "THINKING": "medium",
+  "TIMEOUT_SECONDS": "900",
+  "PI_BM25_K1": "25",
+  "PI_BM25_B": "1",
+  "query_ids": [
+    "770",
+    "781",
+    "788",
+    "792",
+    "244"
+  ],
+  "agent_runs": 10,
+  "concurrency": 4,
+  "index": "indexes/browsecomp-plus-bm25-tevatron",
+  "treatment": "first_move registration only",
+  "audit": true,
+  "automatic_retries": false
+}

@@ -1,0 +1,141 @@
+[
+  {
+    "query_id": "770",
+    "pi_serini": {
+      "status": "completed",
+      "first_tool": "search",
+      "first_move_calls": 0,
+      "tool_failures": 0,
+      "api_errors": []
+    },
+    "questions_gambit": {
+      "status": "failed",
+      "first_tool": "first_move",
+      "first_move_calls": 1,
+      "tool_failures": 0,
+      "api_errors": [
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 969469, Requested 50391. Please try again in 1.191s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 963650, Requested 50391. Please try again in 842ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 993785, Requested 50391. Please try again in 2.65s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 975152, Requested 50391. Please try again in 1.532s. Visit https://platform.openai.com/account/rate-limits to learn more."
+      ]
+    },
+    "shared_prompts_identical": true,
+    "archive_sha256": "1820a56fb18b5dc46d876bb234e2862d511e1b9f15669aba811194a306e409d6"
+  },
+  {
+    "query_id": "781",
+    "pi_serini": {
+      "status": "completed",
+      "first_tool": "search",
+      "first_move_calls": 0,
+      "tool_failures": 0,
+      "api_errors": []
+    },
+    "questions_gambit": {
+      "status": "completed",
+      "first_tool": "first_move",
+      "first_move_calls": 1,
+      "tool_failures": 0,
+      "api_errors": []
+    },
+    "shared_prompts_identical": true,
+    "archive_sha256": "9c7a916b354cfc7039f0fdfb140765c514fb2c49a994658308e157b5d5787122"
+  },
+  {
+    "query_id": "788",
+    "pi_serini": {
+      "status": "completed",
+      "first_tool": "search",
+      "first_move_calls": 0,
+      "tool_failures": 0,
+      "api_errors": [
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 994175, Requested 35326. Please try again in 1.77s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 968679, Requested 37753. Please try again in 385ms. Visit https://platform.openai.com/account/rate-limits to learn more."
+      ]
+    },
+    "questions_gambit": {
+      "status": "completed",
+      "first_tool": "first_move",
+      "first_move_calls": 1,
+      "tool_failures": 0,
+      "api_errors": []
+    },
+    "shared_prompts_identical": true,
+    "archive_sha256": "46dd7af3a0b80569c98682c564d2919377505968ccd31dd3d220380ccd1b7875"
+  },
+  {
+    "query_id": "792",
+    "pi_serini": {
+      "status": "completed",
+      "first_tool": "search",
+      "first_move_calls": 0,
+      "tool_failures": 0,
+      "api_errors": []
+    },
+    "questions_gambit": {
+      "status": "completed",
+      "first_tool": "first_move",
+      "first_move_calls": 1,
+      "tool_failures": 0,
+      "api_errors": []
+    },
+    "shared_prompts_identical": true,
+    "archive_sha256": "7f4c0281435720600b50a8c0f58ce4852385b349eb1e0de41943ab45e6dfe1be"
+  },
+  {
+    "query_id": "244",
+    "pi_serini": {
+      "status": "failed",
+      "first_tool": "search",
+      "first_move_calls": 0,
+      "tool_failures": 0,
+      "api_errors": [
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 951985, Requested 60954. Please try again in 776ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 949894, Requested 60954. Please try again in 650ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 959160, Requested 62152. Please try again in 1.278s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 979028, Requested 63042. Please try again in 2.524s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 952801, Requested 63705. Please try again in 990ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 962946, Requested 64571. Please try again in 1.651s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 939911, Requested 66837. Please try again in 404ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 978588, Requested 68208. Please try again in 2.807s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 978618, Requested 68208. Please try again in 2.809s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 947250, Requested 68208. Please try again in 927ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 972643, Requested 68208. Please try again in 2.451s. Visit https://platform.openai.com/account/rate-limits to learn more."
+      ]
+    },
+    "questions_gambit": {
+      "status": "completed",
+      "first_tool": "first_move",
+      "first_move_calls": 1,
+      "tool_failures": 0,
+      "api_errors": [
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 954388, Requested 46182. Please try again in 34ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 964685, Requested 46182. Please try again in 652ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 946656, Requested 54672. Please try again in 79ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 954683, Requested 54672. Please try again in 561ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 954659, Requested 55775. Please try again in 626ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 966911, Requested 55775. Please try again in 1.361s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 951951, Requested 55775. Please try again in 463ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 945436, Requested 56915. Please try again in 141ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 937661, Requested 76505. Please try again in 849ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 964661, Requested 81747. Please try again in 2.784s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 940870, Requested 82307. Please try again in 1.39s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 933469, Requested 83627. Please try again in 1.025s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 927027, Requested 84235. Please try again in 675ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 923704, Requested 86721. Please try again in 625ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 921044, Requested 87328. Please try again in 502ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 940231, Requested 88538. Please try again in 1.726s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 936436, Requested 89077. Please try again in 1.53s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 917598, Requested 89687. Please try again in 437ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 916211, Requested 92691. Please try again in 534ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 910534, Requested 93893. Please try again in 265ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 940230, Requested 98312. Please try again in 2.312s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 909909, Requested 99113. Please try again in 541ms. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "Rate limit reached for gpt-5.5 in organization [REDACTED_ORGANIZATION] on tokens per min (TPM): Limit 1000000, Used 905414, Requested 99684. Please try again in 305ms. Visit https://platform.openai.com/account/rate-limits to learn more."
+      ]
+    },
+    "shared_prompts_identical": true,
+    "archive_sha256": "33006aa0f373b8745d8b884260047283157a784357a36e233662305bc341e7db"
+  }
+]

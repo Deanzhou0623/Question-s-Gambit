@@ -339,11 +339,18 @@ export function registerPiSearchExtension(
             throw new Error("first_move (live): decomposition returned 0 constraints");
           }
           const decompMs = Date.now() - tStart;
+          const saveAudit = (name: string, data: unknown) => {
+            if (process.env.PI_SEARCH_AUDIT !== "1" || !process.env.OUTPUT_DIR) return;
+            const dir = join(process.env.OUTPUT_DIR, "first_move_audit");
+            mkdirSync(dir, { recursive: true });
+            writeFileSync(join(dir, `${callSeq}-${name}.json`), JSON.stringify(data, null, 2));
+          };
+          saveAudit("clues", constraints);
           const backend = toolDeps.backendRuntime.getBackend(ctx.cwd);
 
           const tMugi0 = Date.now();
           const subResults = await Promise.all(
-            constraints.map(async (c) => {
+            constraints.map(async (c, clueIndex) => {
               const prelim = await backend.search(
                 { query: c, limit: FEEDBACK_DOCS_PER_CLUE },
                 signal ?? undefined,
@@ -359,6 +366,8 @@ export function registerPiSearchExtension(
                   return t && sn ? `${t}. ${sn}` : t || sn || "";
                 })
                 .filter((p): p is string => p.length > 0);
+              saveAudit(`clue-${clueIndex + 1}-feedback`, { clue: c, hits: prelim.hits, passages,
+                expansion_input_passages: passages.map(p => p.replace(/\s+/g, " ").trim().slice(0, 1200)) });
 
               const refResult = await expandClue(
                 clueExpansionConfig,
@@ -372,6 +381,8 @@ export function registerPiSearchExtension(
                 { query: bm25Query, limit: PER_CLUE_DEPTH },
                 signal ?? undefined,
               );
+              saveAudit(`clue-${clueIndex + 1}-expansion`, { clue: c, ...refResult, bm25Query,
+                hits: finalBm25.hits });
               logExpansionCall({
                 candidate_query: c,
                 wrapped_query_sent: c,
@@ -547,6 +558,7 @@ export function registerPiSearchExtension(
           );
           const page = buildSearchPage(cached, 1, FIRST_MOVE_TOP_K);
           const rendered = formatSearchPageText(page);
+          saveAudit("opening", { constraints, pool, rerankCandidates, ranking, fusedHits, rendered });
           const surfacedDocidsAll = ranking.slice(0, SEARCH_CACHE_K);
           const totalMs = Date.now() - tStart;
           const cohereCostStr =

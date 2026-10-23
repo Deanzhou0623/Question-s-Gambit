@@ -1,0 +1,15 @@
+{
+  "query_ids": [
+    "770",
+    "781",
+    "788",
+    "792",
+    "244"
+  ],
+  "max_distinct_questions": 5,
+  "initial_agent_runs": 10,
+  "source_sha256": "d3d47d3cd6a8e14fa24268b75fbbda50dadd280d09c30412257978933b9c0bfa",
+  "questions_sha256": "6f4eec546d75435b835fcb061b6ffabee06c1b17c624406eb46655d4a1159a67",
+  "git_revision": "729f982b13b7dc1582912cb0f44eee94adab43f7",
+  "verification": "Full dataset texts manually matched to user-supplied questions; anchors checked at launch."
+}
