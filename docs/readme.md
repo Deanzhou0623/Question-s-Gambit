@@ -62,8 +62,12 @@ These are single-run observations. Rate limits also affected some completed runs
 5. On **788**, how should we evaluate an answer that names the right entity but does not verify all the conditions?
 6. Comparing **781, 788, and 792**, when is Gambit's additional opening work worth the cost?
 
-## 5. What I can do next
+## 5. Possible next steps
 
-1. **Finish the evidence chains using existing traces.** For 781, 770, and 244, mark where the two paths diverge, which document prompted the next action, and what remains unverified. Also inspect task 484 from the 20-question batch, where baseline was judged correct and Gambit incorrect.
-2. **Choose one small follow-up check.** Depending on the discussion, inspect ranking inputs on 770 or test removing the misleading opening candidate on 244. Change one factor at a time and record the computation used; do not expand into a new agent design yet.
-3. **Complete missing pairs only if needed.** If final-answer comparisons for 770 and 244 are necessary, rerun the interrupted conditions with a separate attempt record. These are proposed next steps, not experiments already performed.
+Based on these results, I'd like to explore why useful evidence sometimes gets retrieved but does not reach the agent's opening context. Task 770 seems particularly useful because the correct document was ranked highly during retrieval but dropped below the final top-five cutoff.
+
+I'd also like to inspect task 484, where baseline answered correctly and Gambit did not, to see where their paths diverged and whether it shows a similar problem.
+
+After reviewing these traces, I could choose one small controlled experiment—for example, changing the opening document selection while keeping the rest of the setup fixed.
+
+**Would you suggest focusing first on evidence selection, or on how misleading opening evidence affects later searches?**
