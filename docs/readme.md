@@ -5,7 +5,7 @@ questions were run in both conditions (ten traces): eight completed, and
 Gambit–770 and baseline–244 failed after repeated API token-rate-limit errors.
 No replacement attempts or answer judging were run.
 
-Inspect the [five trace pairs](../runs/comparison5/public/TRACE_PAIRS.md).
+Inspect the [five trace pairs](comparison5/TRACE_PAIRS.md).
 The index links readable transcripts, final answers where available, and full
 sanitized artifact archives. Complete original artifacts remain under the local
 `runs/comparison5/<condition>/queries/<id>/` directories.
@@ -145,6 +145,7 @@ reranking within the full Gambit pipeline.
 
 ```text
 docs/readme.md
+docs/comparison5/     # published trace pairs, transcripts, answers, and archives
 runs/comparison5/
   questions.tsv
   configuration.json
@@ -158,9 +159,9 @@ runs/comparison5/
 ```
 
 Commit experiment scripts, this specification, the pair index, and publishable
-results on `experiment/five-question-trace-comparison`. The existing `runs/`
-ignore rule needs a scoped exception for the publishable comparison artifacts;
-do not expose unrelated runs. Keep complete raw artifacts locally and preserve
+results on `experiment/five-question-trace-comparison`. Publish results under
+`docs/comparison5/`; keep `runs/` ignored so unrelated runs remain local.
+Keep complete raw artifacts locally and preserve
 trace links to their publishable counterparts where sanitization is needed.
 
 The repository is public. Exclude credentials, authorization headers, local

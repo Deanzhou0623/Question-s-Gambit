@@ -10,7 +10,7 @@ import tarfile
 import run_comparison5 as runner
 
 ROOT, DEST, IDS = runner.ROOT, runner.DEST, runner.IDS
-PUBLIC = DEST / 'public'
+PUBLIC = ROOT / 'docs/comparison5'
 
 def sanitize(text):
     for key, value in os.environ.items():
