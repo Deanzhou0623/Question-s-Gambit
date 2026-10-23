@@ -1,4 +1,6 @@
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 import { buildFirstMoveToolDescription } from "./agent_prompt";
 import { resolvePiSearchExtensionConfigFromEnv, type PiSearchExtensionConfig } from "./config";
 import {
@@ -127,6 +129,14 @@ export function registerPiSearchExtension(
     const strippedSystemPrompt = stripBenchmarkIrrelevantSystemPromptSections(event.systemPrompt);
     if (!promptSnapshotWritten) {
       promptSnapshotWritten = true;
+      if (process.env.EXPERIMENT_USAGE_FILE && process.env.OUTPUT_DIR) {
+        mkdirSync(process.env.OUTPUT_DIR, { recursive: true });
+        writeFileSync(join(process.env.OUTPUT_DIR, "prompt_snapshot.json"), JSON.stringify({
+          system_prompt: strippedSystemPrompt,
+          user_prompt: event.prompt,
+          first_move_enabled: process.env.PI_SEARCH_FIRST_MOVE_ENABLED !== "0",
+        }, null, 2) + "\n");
+      }
     }
     if (!latestOriginalQuestion) {
       const match =
@@ -296,8 +306,9 @@ export function registerPiSearchExtension(
   });
 
   // benchmark_search / constraint_search even when a clue expansion key is set.
-  // Used by the first_move pipeline
-  {
+  // Controlled Pi-Serini comparison: retain the shared prompt and downstream tools.
+  // Only Question's Gambit registers the additional first_move tool.
+  if (process.env.PI_SEARCH_FIRST_MOVE_ENABLED !== "0") {
     pi.registerTool({
       name: "first_move",
       label: "First-Move",

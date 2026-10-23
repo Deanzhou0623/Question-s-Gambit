@@ -61,6 +61,7 @@ const OPENAI_API_BASE = "https://api.openai.com";
 
 type CliArgs = {
   armDir: string;
+  queryFile?: string;
   judgeModel: string;
   judgeModelDisplay: string;
   benchmark: string;
@@ -96,6 +97,10 @@ function parseArgs(argv: string[]): CliArgs {
     const a = argv[i];
     const n = argv[i + 1];
     switch (a) {
+      case "--query-file":
+        args.queryFile = n;
+        i += 1;
+        break;
       case "--armDir":
       case "--arm-dir":
         args.armDir = n;
@@ -350,7 +355,7 @@ async function main(): Promise<void> {
   const slugMatch = armBasename.match(new RegExp(`^pi_bm25_${args.benchmark}_(\\w+)_qg_dx`));
   const querySetId = slugMatch ? slugMatch[1] : "qfull";
   const queryPath =
-    (bench.querySets as Record<string, string>)[querySetId] ?? bench.defaultQueryPath;
+    args.queryFile ?? (bench.querySets as Record<string, string>)[querySetId] ?? bench.defaultQueryPath;
   const queryPathAbs = resolvePath(REPO_ROOT, queryPath);
   const groundTruthPath = resolvePath(REPO_ROOT, bench.defaultGroundTruthPath ?? "");
   const qrelsPath = resolvePath(REPO_ROOT, bench.defaultQrelsPath);
