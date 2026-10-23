@@ -55,16 +55,21 @@ def report():
             transcript = []
             for raw in sorted((unit / 'raw-events').glob('*.jsonl')):
                 for line in raw.read_text().splitlines():
-                    event = json.loads(line)
+                    try: event = json.loads(line)
+                    except ValueError: continue  # Another run may still be appending its final line.
                     if event.get('type') == 'message_end':
                         transcript += ['## Message', '', '```json', json.dumps(event['message'], indent=2), '```', '']
                     elif event.get('type') in ('tool_execution_start', 'tool_execution_end'):
                         transcript += [f"## {event['type']}", '', '```json', json.dumps(event, indent=2), '```', '']
             (unit / 'transcript.md').write_text('\n'.join(transcript))
-            (unit / 'answer.json').write_text(json.dumps(data.get('result'), indent=2) + '\n')
+            answer = '\n\n'.join(item.get('output', '') for item in data.get('result', [])
+                                   if item.get('type') == 'output_text')
+            if data['status'] != 'completed':
+                answer = f"No completed final answer. Run status: {data['status']}. See raw events and launch log."
+            (unit / 'answer.md').write_text(answer + '\n')
             rel = f'{arm}/queries/{qid}'
             lines += [f'- **{arm}**: {data["status"]}; '
-                      f'[transcript]({rel}/transcript.md), [answer]({rel}/answer.json), '
+                      f'[transcript]({rel}/transcript.md), [answer]({rel}/answer.md), '
                       f'[result]({rel}/{qid}.json), [raw events]({rel}/raw-events/), '
                       f'[prompt]({rel}/prompt_snapshot.json).']
             if arm == 'questions_gambit':

@@ -1,0 +1,3 @@
+Explanation: The mosque is Taj-ul-Masajid in Bhopal. It was completed before 1990—the guide says construction resumed in 1971 and was completed in 1985 [56202]. Its size matches the quantitative clues: about 430,000 sq ft of interior area and capacity of 175,000 people [96357]. For the walking-distance mosque clue, Moti Masjid is listed 1.2 km from Taj-ul-Masjid [6743], and another source says Moti Masjid was built in 1860, after 1720 [95802]. For the hospital clue, a local page lists “Govt Hamidia Hospital and Gandhi Medical College” 0.5 km from Taj-ul-Masajid [56188], and Hamidia’s present hospital buildings/wings were occupied/added in 1953 and 1956, after 1930 [57904].
+Exact Answer: Taj-ul-Masajid
+Confidence: 82%

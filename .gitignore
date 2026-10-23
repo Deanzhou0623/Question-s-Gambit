@@ -15,6 +15,9 @@ vendor/*
 # Experiment outputs
 runs/*
 !runs/.gitkeep
+!runs/comparison5/
+runs/comparison5/*
+!runs/comparison5/public/
 evals/*
 !evals/.gitkeep
 snapshots/*

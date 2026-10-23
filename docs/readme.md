@@ -1,6 +1,14 @@
 # Five-question paired trace experiment specification
 
-Status: specification only; no experiment runs have started.
+Status: the initial experiment finished on October 22, 2026. Exactly five
+questions were run in both conditions (ten traces): eight completed, and
+Gambit–770 and baseline–244 failed after repeated API token-rate-limit errors.
+No replacement attempts or answer judging were run.
+
+Inspect the [five trace pairs](../runs/comparison5/public/TRACE_PAIRS.md).
+The index links readable transcripts, final answers where available, and full
+sanitized artifact archives. Complete original artifacts remain under the local
+`runs/comparison5/<condition>/queries/<id>/` directories.
 
 Branch: `experiment/five-question-trace-comparison`.
 
@@ -18,7 +26,7 @@ labels, not replacements for the full original questions.
 | 4 | 792 | Article about a supplement-based disease approach | `runs/comparison5/questions_gambit/queries/792/` | `runs/comparison5/pi_serini/queries/792/` |
 | 5 | 244 | Shared 2016 citation in a post and scientific paper | `runs/comparison5/questions_gambit/queries/244/` | `runs/comparison5/pi_serini/queries/244/` |
 
-These directories are planned outputs and do not yet contain new traces.
+These local directories now contain the initial traces, including failed runs.
 The initial deliverable after running is an index linking each pair so the user
 can inspect the traces themselves. Written qualitative reviews are optional
 follow-up work, not a prerequisite for delivering the trace pairs.
